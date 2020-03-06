@@ -10,15 +10,23 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 html {
   padding: 80px;
 }
+.checkerboard li {
+  background: #DDD;
+}
+
 .checkerboard {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(2, 200px);
-}
-.checkerboard li {
-  background: #DDD;
+  grid-template-areas:
+    "a b"
+    "c d";
 }
 .checkerboard .two {
+  grid-area: d;
+  /* or with specific grid lines: */
+  /*
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  */
 }
